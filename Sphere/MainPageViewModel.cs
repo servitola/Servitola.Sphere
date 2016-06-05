@@ -1,12 +1,16 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using System.Windows.Input;
 using Windows.Foundation;
 using Windows.Storage;
 using Windows.Storage.Pickers;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Xaml.Shapes;
 using Sphere.Annotations;
 
 namespace Sphere
@@ -67,6 +71,10 @@ namespace Sphere
 							var a = new BitmapImage();
 							await a.SetSourceAsync(imageStream);
 							MainImage = a;
+
+							BitmapImage myBitmap = new BitmapImage();
+
+							
 						}
 					}
 				}));

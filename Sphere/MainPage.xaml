@@ -11,7 +11,7 @@
 		<local:MainPageViewModel/>
 	</Page.DataContext>
 
-	<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="top">
 		<Button Command="{Binding LoadPictureFromFileCommand}">Загрузить картинку</Button>
 		<TextBox PlaceholderText="Верхний текст" Text="{Binding Text1}"></TextBox>
 		<Image Source="{Binding MainImage}"/>
