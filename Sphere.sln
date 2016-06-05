@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sphere", "Sphere\Sphere.csproj", "{0C5C324A-312A-4C38-B0AD-964FB8FF9877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servitola.Sphere.UWP", "Servitola.Sphere.UWP\Servitola.Sphere.UWP.csproj", "{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|ARM.Build.0 = Debug|ARM
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|ARM.Deploy.0 = Debug|ARM
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|x64.ActiveCfg = Debug|x64
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|x64.Build.0 = Debug|x64
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|x64.Deploy.0 = Debug|x64
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|x86.ActiveCfg = Debug|x86
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|x86.Build.0 = Debug|x86
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Debug|x86.Deploy.0 = Debug|x86
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|ARM.ActiveCfg = Release|ARM
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|ARM.Build.0 = Release|ARM
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|ARM.Deploy.0 = Release|ARM
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|x64.ActiveCfg = Release|x64
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|x64.Build.0 = Release|x64
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|x64.Deploy.0 = Release|x64
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|x86.ActiveCfg = Release|x86
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|x86.Build.0 = Release|x86
+		{0C5C324A-312A-4C38-B0AD-964FB8FF9877}.Release|x86.Deploy.0 = Release|x86
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|ARM.Build.0 = Debug|ARM
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|x64.ActiveCfg = Debug|x64
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|x64.Build.0 = Debug|x64
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|x64.Deploy.0 = Debug|x64
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|x86.ActiveCfg = Debug|x86
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|x86.Build.0 = Debug|x86
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Debug|x86.Deploy.0 = Debug|x86
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|ARM.ActiveCfg = Release|ARM
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|ARM.Build.0 = Release|ARM
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|ARM.Deploy.0 = Release|ARM
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|x64.ActiveCfg = Release|x64
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|x64.Build.0 = Release|x64
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|x64.Deploy.0 = Release|x64
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|x86.ActiveCfg = Release|x86
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|x86.Build.0 = Release|x86
+		{097E2AC1-F4EE-4DF2-BBD1-B45F686BDAFC}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
