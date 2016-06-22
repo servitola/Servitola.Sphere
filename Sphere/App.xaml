@@ -5,4 +5,8 @@
     xmlns:local="using:Sphere"
     RequestedTheme="Light">
 
+	<Application.Resources>
+		<ResourceDictionary Source="Generic.xaml"/>
+	</Application.Resources>
+	
 </Application>

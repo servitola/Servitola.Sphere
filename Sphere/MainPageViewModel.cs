@@ -51,32 +51,32 @@ namespace Sphere
 			{
 				return _loadPictureFromFileCommand ?? (_loadPictureFromFileCommand = new Command(async () =>
 				{
-					var openPicker = new FileOpenPicker
-					{
-						ViewMode = PickerViewMode.Thumbnail,
-						SuggestedStartLocation = PickerLocationId.PicturesLibrary,
-						FileTypeFilter =
-						{
-							".jpg",
-							".png"
-						}
-					};
+					//var openPicker = new FileOpenPicker
+					//{
+					//	ViewMode = PickerViewMode.Thumbnail,
+					//	SuggestedStartLocation = PickerLocationId.PicturesLibrary,
+					//	FileTypeFilter =
+					//	{
+					//		".jpg",
+					//		".png"
+					//	}
+					//};
 					
-					var file = await openPicker.PickSingleFileAsync();
+					//var file = await openPicker.PickSingleFileAsync();
 
-					if (file != null)
-					{
-						using (var imageStream = await file.OpenReadAsync())
-						{
-							var a = new BitmapImage();
-							await a.SetSourceAsync(imageStream);
-							MainImage = a;
+					//if (file != null)
+					//{
+					//	using (var imageStream = await file.OpenReadAsync())
+					//	{
+					//		var a = new BitmapImage();
+					//		await a.SetSourceAsync(imageStream);
+					//		MainImage = a;
 
-							BitmapImage myBitmap = new BitmapImage();
+					//		BitmapImage myBitmap = new BitmapImage();
 
 							
-						}
-					}
+					//	}
+					//}
 				}));
 			}
 		}
