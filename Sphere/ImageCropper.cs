@@ -242,9 +242,9 @@
 
                 var side = Math.Max(Math.Abs(xUpdate), Math.Abs(yUpdate));
 
-                this.selectedRegion.UpdateCorner((sender as ContentControl).Tag as string,
-                    side * Math.Sign(xUpdate),
-                    side * Math.Sign(yUpdate));
+                //this.selectedRegion.UpdateCorner((sender as ContentControl).Tag as string,
+                //    side * Math.Sign(xUpdate),
+                //    side * Math.Sign(yUpdate));
 
                 pointerPositionHistory[ptrId] = currentPosition;
             }
@@ -338,9 +338,10 @@
 
                 this.imageCanvas.Height = e.NewSize.Height;
                 this.imageCanvas.Width = e.NewSize.Width;
-                this.selectedRegion.OuterRect = new Rect(0, 0, e.NewSize.Width, e.NewSize.Height);
-
-                // Always Reset Selected Region
+                this.selectedRegion.OuterCenter = new Point(e.NewSize.Width / 2, e.NewSize.Height / 2);
+                this.selectedRegion.OuterRadius = e.NewSize.Width / 2;
+                    
+                    // Always Reset Selected Region
                 var width = Math.Min(e.NewSize.Width, e.NewSize.Height);
                 this.selectedRegion.ResetCorner(0, 0, width, width);
 
