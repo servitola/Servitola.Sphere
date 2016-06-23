@@ -72,8 +72,7 @@ namespace Sphere
 			{
 				var wb = new WriteableBitmap(1, 1);
 				await wb.LoadAsync(imgFile);
-				this.ImageCropper.SourceImage = wb;
-				ImageCropper.Height = wb.PixelHeight;
+			    image.Source = wb;
 			}
 		}
 	}

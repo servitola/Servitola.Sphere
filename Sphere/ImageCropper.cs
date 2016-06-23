@@ -1,21 +1,21 @@
-﻿namespace XamlBrewer.Uwp.Controls
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Diagnostics;
-    using System.Threading.Tasks;
-    using XamlBrewer.Uwp.Controls.Helpers;
-    using Windows.Foundation;
-    using Windows.Graphics.Imaging;
-    using Windows.Storage;
-    using Windows.Storage.Streams;
-    using Windows.UI.Xaml;
-    using Windows.UI.Xaml.Controls;
-    using Windows.UI.Xaml.Input;
-    using Windows.UI.Xaml.Media.Imaging;
-    using Windows.UI.Xaml.Shapes;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Threading.Tasks;
+using Windows.Foundation;
+using Windows.Graphics.Imaging;
+using Windows.Storage;
+using Windows.Storage.Streams;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Xaml.Shapes;
+using XamlBrewer.Uwp.Controls;
+using XamlBrewer.Uwp.Controls.Helpers;
 
+namespace Sphere
+{
     /// <summary>
     /// Image Control with Cropper.
     /// </summary>
@@ -173,10 +173,10 @@
 
             this.layoutRoot = this.GetTemplateChild(LayoutRootPartName) as Grid;
 
-            this.selectRegion = this.GetTemplateChild(SelectRegionPartName) as Path;
-            this.selectRegion.ManipulationMode = ManipulationModes.Scale | ManipulationModes.TranslateX | ManipulationModes.TranslateY;
-            selectedRegion = new SelectedRegion { MinSelectRegionSize = 2 * CornerSize };
-            this.DataContext = selectedRegion;
+            //this.selectRegion = this.GetTemplateChild(SelectRegionPartName) as Path;
+            //this.selectRegion.ManipulationMode = ManipulationModes.Scale | ManipulationModes.TranslateX | ManipulationModes.TranslateY;
+            //selectedRegion = new SelectedRegion { MinSelectRegionSize = 2 * CornerSize };
+            //this.DataContext = selectedRegion;
 
             this.topLeftCorner = this.GetTemplateChild(TopLeftCornerPartName) as ContentControl;
             this.topRightCorner = this.GetTemplateChild(TopRightCornerPartName) as ContentControl;
@@ -193,17 +193,17 @@
             AddCornerEvents(this.bottomRightCorner);
 
             // Handle the manipulation events of the selectRegion
-            this.selectRegion.ManipulationDelta += SelectRegion_ManipulationDelta;
-            this.selectRegion.ManipulationCompleted += SelectRegion_ManipulationCompleted;
+            //this.selectRegion.ManipulationDelta += SelectRegion_ManipulationDelta;
+            //this.selectRegion.ManipulationCompleted += SelectRegion_ManipulationCompleted;
 
             this.sourceImage.SizeChanged += SourceImage_SizeChanged;
         }
 
         private void AddCornerEvents(Control corner)
         {
-            corner.PointerPressed += Corner_PointerPressed;
-            corner.PointerMoved += Corner_PointerMoved;
-            corner.PointerReleased += Corner_PointerReleased;
+            //corner.PointerPressed += Corner_PointerPressed;
+            //corner.PointerMoved += Corner_PointerMoved;
+            //corner.PointerReleased += Corner_PointerReleased;
         }
 
         /// <summary>
@@ -326,27 +326,27 @@
         /// </summary>
         private void SourceImage_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (e.NewSize.IsEmpty || double.IsNaN(e.NewSize.Height) || e.NewSize.Height <= 0)
-            {
-                this.imageCanvas.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                this.selectedRegion.OuterCenter = new Point();
-				this.selectedRegion.ResetCorner(0, 0, 0, 0);
-            }
-            else
-            {
-                this.imageCanvas.Visibility = Windows.UI.Xaml.Visibility.Visible;
+    //        if (e.NewSize.IsEmpty || double.IsNaN(e.NewSize.Height) || e.NewSize.Height <= 0)
+    //        {
+    //            this.imageCanvas.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+    //            this.selectedRegion.OuterCenter = new Point();
+				//this.selectedRegion.ResetCorner(0, 0, 0, 0);
+    //        }
+    //        else
+    //        {
+    //            this.imageCanvas.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
-                this.imageCanvas.Height = e.NewSize.Height;
-                this.imageCanvas.Width = e.NewSize.Width;
-                this.selectedRegion.OuterCenter = new Point(e.NewSize.Width / 2, e.NewSize.Height / 2);
-                this.selectedRegion.OuterRadius = e.NewSize.Width / 2;
+    //            this.imageCanvas.Height = e.NewSize.Height;
+    //            this.imageCanvas.Width = e.NewSize.Width;
+    //            this.selectedRegion.OuterCenter = new Point(e.NewSize.Width / 2, e.NewSize.Height / 2);
+    //            this.selectedRegion.OuterRadius = e.NewSize.Width / 2;
                     
-                    // Always Reset Selected Region
-                var width = Math.Min(e.NewSize.Width, e.NewSize.Height);
-                this.selectedRegion.ResetCorner(0, 0, width, width);
+    //                // Always Reset Selected Region
+    //            var width = Math.Min(e.NewSize.Width, e.NewSize.Height);
+    //            this.selectedRegion.ResetCorner(0, 0, width, width);
 
-                this.UpdatePreviewImage();
-            }
+    //            this.UpdatePreviewImage();
+    //        }
         }
     }
 }
